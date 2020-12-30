@@ -1,7 +1,7 @@
 <?php
 
-require('views/layout');
+require('views/layout/head.php');
 
-require('navBar.php');
+require('views/navBar.php');
 
-require('end.php');
+require('views/layout/end.php');
