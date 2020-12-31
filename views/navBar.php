@@ -11,11 +11,11 @@
 
 </head>
 <body>
-<nav class="navBar">
-    <div class="nav-flex-container navbar-header ">
+
+<nav class="navBar nav-flex-container navbar-header">
         <div class="nav-flex-item-1">
             <a class=" nav-logo" href="/">
-                <img src="public/images/navbar-brand.png"  alt="">
+                <img src="public/img/navbar-brand.png"  alt="">
                 <span>NavBar</span>
             </a>
 
@@ -45,9 +45,7 @@
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
-    </div>
 </nav>
-
 
 
 <script src="public/js/app.js"></script>
