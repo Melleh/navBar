@@ -11,23 +11,30 @@ nav * {
     padding: 0;
     margin: 0;
 }
+
+
+
+
 .navBar {
+    z-index: 1000;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-around;
     align-items: flex-end;
-    position: sticky;
+    width: 100%;
+    position: fixed;
     background-color: teal;
     padding: 15px 0px;
     min-height: 7vh;
+    
    }
 .navBar li, button{
     font-weight: 500;   
     font-size: 17px;
 }
 .nav-logo img {
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
     display: inline-block;
     vertical-align: baseline;
 }
@@ -40,7 +47,7 @@ nav * {
             flex-grow: 2;
             text-align: center;
         }
-            .nav-logo span{
+            .navBar .nav-logo {
                 display: inline-block;
                 margin: 0;
                 padding: 0;
@@ -51,7 +58,7 @@ nav * {
                 font-size: 30px;
                 text-align: center;
             }
-            .nav-logo:hover{
+            .navBar .nav-logo:hover{
                 text-decoration: none;
                 color:black;
                 cursor: pointer;
@@ -83,7 +90,8 @@ nav * {
                     flex-flow: row nowrap;
                     justify-content: center;
                 }
-                    .nav-login button {
+                                            
+                    .nav-login a button {    
                         padding: 9px 25px;
                         margin: 0px 4px;
                         border-radius: 50px;
@@ -92,31 +100,29 @@ nav * {
                         display: inline-block;
                         text-align: center;
                         text-decoration: none;
+                        outline: none;
                     }
-                        .registerButton{
-                            width: 135px;
-                            background-color: rgba(247, 192, 22, 1);
+                    .logInButton {
+                            width: 120px;
+                            background-color: #21aa21;
                             color: black;
-                            border: 1px solid rgb(167, 131, 25);
+                            border: 1px solid #21aa21;
                         }
-                        .logInButton{
-                            width: 110px;
-                            background-color: inherit;
+                    .registerButton{
+                            background-color: rgba(1, 146, 146, 0);
                             color: white;
                             border: 1px solid white;
                         }
-                        .registerButton:hover{
-                        border: 1px solid rgb(247, 192, 22, 1);
-                        color: rgb(1, 146, 146);
-                        box-shadow: 0px 0px 1px 1px white;
-                        }
-
                         .logInButton:hover{
-                            background-color: rgb(1, 146, 146);
-                            border-color: rgba(247, 192, 22, 1);
-                            box-shadow: 0px 0px 4px 2px rgba(247, 192, 22, 1);
+                            box-shadow: 0px 0px 2px 1px #464646;
                             transform: translateY(-1px);
                         }
+
+                        .registerButton:hover{
+                            box-shadow: 0px 0px 2px 1px #ffffff;
+                        }
+
+
             .burger{
                 display: none;
                 cursor: pointer;
@@ -131,9 +137,6 @@ nav * {
 
 
 @media screen and (max-width:864px){
-    body{
-        overflow-x: hidden;
-    }
     .nav-links{
         margin-top: 15px;
         position: absolute;
@@ -145,7 +148,7 @@ nav * {
         align-items: center;
         width: 40%;
         transform: translateX(100%);
-        transition: transform 0.5s ease-in;  
+        
     }
     .nav-links li{
         opacity: 0;
@@ -159,6 +162,7 @@ nav * {
 
 .nav-active{
     transform: translateX(0%);
+    transition: transform 0.5s ease-in;  
 }
 
 @keyframes navLinkFade{

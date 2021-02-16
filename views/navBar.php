@@ -15,10 +15,8 @@
 <nav class="navBar nav-flex-container navbar-header">
         <div class="nav-flex-item-1">
             <a class=" nav-logo" href="/">
-                <img src="public/img/navbar-brand.png"  alt="">
-                <span>NavBar</span>
-            </a>
-
+                <img src="public/images/giraffe.png" alt="">
+                EcoQuiz</a>
         </div>
         <div class="nav-flex-item-2">
             <ul class="nav-links">
@@ -34,10 +32,10 @@
             </ul>
         </div>
         <div class="nav-flex-item-3">
-            <form class="nav-login">
-                <button class="registerButton">Register</button>
-                <button class="logInButton">Log In</button>
-            </form>
+            <div class="nav-login">
+                <a href="/login"><button class="logInButton">Log In</button></a>
+                <a href="/register"><button class="registerButton">Register</button></a>
+            </div>
         </div>
 
         <div class="burger nav-flex-item-4">
@@ -45,7 +43,8 @@
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
-</nav>
+    </nav>
+
 
 
 <script src="public/js/app.js"></script>

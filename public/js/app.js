@@ -1,3 +1,7 @@
+window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+});
+
 const navSlide = () => {
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
@@ -22,5 +26,3 @@ const navSlide = () => {
         burger.classList.toggle('toggle');
     });
 }
-
-navSlide();
